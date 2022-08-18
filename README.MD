@@ -6,7 +6,7 @@
 ## 2. npm run dev 
 
 ----
-# Rutas 
+# Rutas de la API
 ---
 ## 1. Productos
 ###         -Get all products (GET)
