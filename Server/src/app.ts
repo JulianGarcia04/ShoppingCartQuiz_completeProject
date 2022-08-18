@@ -13,7 +13,7 @@ class ServerConfig {
 
   constructor() {
     //set to port server
-    this.app.set('PORT', process.env.PORT || 5000);
+    this.app.set('PORT', process.env.PORT || 4000);
 
     //use middlewares
     this.app.use(express.json());

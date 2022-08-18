@@ -15,7 +15,7 @@ const formatError:ErrorRequestHandler = (err, req, res, next)=>{
     message: err.message,
     stack : err.stack
   }
-    return res.json(errorStructure);
+    return res.status(500).json(errorStructure);
 }
 
 const boomErrorHandler:ErrorRequestHandler = (err, req, res, next)=>{
