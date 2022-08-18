@@ -1,0 +1,19 @@
+.navBar-component {
+    display: flex;
+    justify-content: flex-end;
+    background-color: #009244;
+    border: 1px solid #000;
+    height: 75px;
+
+    div {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        width: 25%;
+        height: 100%;
+
+        img {
+            width: 30px;
+        }
+    }
+}

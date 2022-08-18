@@ -1,0 +1,18 @@
+.sectionCarrousell {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+
+    .containerPrincipalCarrousell {
+        display: flex;
+        align-items: center;
+        width: 620px;
+        overflow-x: scroll;
+    }
+
+    .arrowCotainer{
+        width: 50px;
+        height: 50px;
+    }
+}
