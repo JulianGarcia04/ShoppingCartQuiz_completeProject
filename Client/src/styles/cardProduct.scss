@@ -1,0 +1,58 @@
+.cardProduct{
+    display: grid;
+    grid-template-columns: 2fr 4fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    grid-template-areas: "img title"
+                         "img price"
+                         "img div";
+    border: 1px solid #000;
+    border-radius: 10px;
+    padding: 10px 25px;
+    width: 640px;
+    height: 250px;
+
+    img{
+        width: 100%;
+        grid-area: img;
+    }
+
+    h2{
+        width: 100%;
+        text-align: justify;
+        grid-area: title;
+    }
+
+    h3{
+        grid-area: price;
+    }
+
+    .containerOptions {
+        display:  flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 100%;
+        grid-area: div;
+
+        div {
+            display: flex;
+            justify-content: space-between;
+            padding: 0px;
+            width: 30%;
+            p {
+                width: 15px;
+                border: #009244 solid 1px;
+                border-radius: 50%;
+                padding: 5px;
+                text-align: center;
+            }
+        }
+
+        button {
+            height: 50%;
+            border: none;
+            border-radius: 5px;
+            background-color: #009244;
+            color: white;
+        }
+    }
+}
