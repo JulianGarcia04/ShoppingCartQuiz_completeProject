@@ -1,11 +1,10 @@
 import express, {Express} from 'express';
 import morgan from 'morgan';
 import cors from 'cors';
-import dotenv from 'dotenv';
 import adminRoutes from './routes/routes.admin';
 import errorHundle from './middlewares/error.hundle'
+import config from './config';
 
-dotenv.config();
 
 class ServerConfig {
   //set to express
@@ -13,7 +12,7 @@ class ServerConfig {
 
   constructor() {
     //set to port server
-    this.app.set('PORT', process.env.PORT || 4000);
+    this.app.set('PORT', config.PORT || 8080);
 
     //use middlewares
     this.app.use(express.json());

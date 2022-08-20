@@ -14,6 +14,10 @@ class Pedido {
         type: Boolean,
         required: true
       },
+      subTotal:{
+        type: Number,
+        reuqired: true
+      },
       total:{
         type:Number,
         required:true

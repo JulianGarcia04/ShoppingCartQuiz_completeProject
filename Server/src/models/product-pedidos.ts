@@ -6,15 +6,15 @@ class ProductPedido {
   constructor() {
     //CREATE SCHEMA OF THE DATABASES
     this.productPedidoSchema = new Schema({
-      id_products: {
-        type: Array,
-        required: true
-      },
       id_pedido: {
         type: String,
         required: true
       },
-      subtotal: {
+      id_product: {
+        type: String,
+        required: true
+      },
+      cantidad: {
         type: Number,
         required: true
       }
