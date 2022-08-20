@@ -10,6 +10,10 @@ function App() {
       <Carrousell/>
       <section className='containerCardproduts'>
         <CardProduct/>
+        <CardProduct/>
+        <CardProduct/>
+        <CardProduct/>
+        <CardProduct/>
       </section>
     </div>
   );

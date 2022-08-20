@@ -5,6 +5,7 @@
     grid-template-areas: "img title"
                          "img price"
                          "img div";
+    margin: 20px 0px;
     border: 1px solid #000;
     border-radius: 10px;
     padding: 10px 25px;
@@ -40,10 +41,11 @@
             width: 30%;
             p {
                 width: 15px;
-                border: #009244 solid 1px;
+                border: #009244 solid 2px;
                 border-radius: 50%;
                 padding: 5px;
                 text-align: center;
+                cursor: pointer;
             }
         }
 
