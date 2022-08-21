@@ -1,6 +1,7 @@
 import express, {Express} from 'express';
 import morgan from 'morgan';
 import cors from 'cors';
+import path from 'path';
 import adminRoutes from './routes/routes.admin';
 import errorHundle from './middlewares/error.hundle'
 import config from './config';
@@ -11,13 +12,14 @@ class ServerConfig {
   protected app:Express = express();
 
   constructor() {
-    //set to port server
+    //set options the server
     this.app.set('PORT', config.PORT || 8080);
 
     //use middlewares
     this.app.use(express.json());
     this.app.use(morgan('dev'));
     this.app.use(cors());
+    this.app.use('/', express.static(path.join(__dirname, './public')));
 
     //routes
     adminRoutes(this.app);
