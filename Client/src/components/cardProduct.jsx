@@ -4,20 +4,19 @@ import ImageProduct from './imageProduct';
 import ButtonProduct from './buttonProduct';
 import '../styles/cardProduct.scss';
 
-class CardProduct extends React.Component {
-    render(){
-        return(
-            <div className="cardProduct" onClick={this.props.methods}>
-                <ImageProduct img={this.props.img}/>
-                <h2>{this.props.title}</h2>
-                <h3>${this.props.price}</h3>
-                <div className='containerOptions'>
-                    <CounterProduct/>
-                    <ButtonProduct title={"Añadir al carrito"}/>
-                </div>
-            </div>
-        )
-    }
+const CardProduct = (props)=>{
+
+  return(
+      <div className="cardProduct" onClick={props.methods}>
+          <ImageProduct img={props.img}/>
+          <h2>{props.title}</h2>
+          <h3>${props.price}</h3>
+          <div className='containerOptions'>
+              <CounterProduct/>
+              <ButtonProduct title={"Añadir al carrito"}/>
+          </div>
+      </div>
+  )
 }
 
 export default CardProduct;

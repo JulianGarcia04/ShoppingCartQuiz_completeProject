@@ -9,6 +9,7 @@ import '../styles/App.scss';
 
 function App() {
   let [data, setData] = useState([]);
+  let [oldComponent, setOldComponent] = useState(null);
   let navigate = useNavigate();
 
   useEffect(()=>{
@@ -16,12 +17,16 @@ function App() {
   }, [])
 
   let renderComponent = data.map(e=>{
-    return <CardProduct img={e.image} title={e.nombre} price={e.precioUnid} key={e._id} methods={()=>{
+    return <CardProduct img={e.image} title={e.nombre} price={e.precioUnid} key={e._id} methods={(event)=>{
+      if(oldComponent!= null){
+        oldComponent.style.display = 'grid';
+      }
       let key = e._id;
       navigate(`/${key}`, {replace: true});
+      event.currentTarget.style.display = 'none';
+      setOldComponent(event.currentTarget);
     }}/>
   })
-
   return (
     <div className="App">
       <NavBar/>
