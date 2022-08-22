@@ -7,7 +7,7 @@ import '../styles/cardProduct.scss';
 class CardProduct extends React.Component {
     render(){
         return(
-            <div className="cardProduct">
+            <div className="cardProduct" onClick={this.props.methods}>
                 <ImageProduct img={this.props.img}/>
                 <h2>{this.props.title}</h2>
                 <h3>${this.props.price}</h3>

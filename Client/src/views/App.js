@@ -4,24 +4,31 @@ import CardProduct from '../components/cardProduct.jsx';
 import CardProductDetails from '../components/cardProduct.Details.jsx';
 import { getData } from '../services/services.api.js';
 import { useEffect, useState } from 'react';
+import { Routes, Route, useNavigate } from 'react-router-dom';
 import '../styles/App.scss';
 
 function App() {
   let [data, setData] = useState([]);
+  let navigate = useNavigate();
 
   useEffect(()=>{
     getData().then(res=>setData(res));
   }, [])
 
   let renderComponent = data.map(e=>{
-    return <CardProduct img={e.image} title={e.nombre} price={e.precioUnid} key={e._id}/>
+    return <CardProduct img={e.image} title={e.nombre} price={e.precioUnid} key={e._id} methods={()=>{
+      let key = e._id;
+      navigate(`/${key}`, {replace: true});
+    }}/>
   })
 
   return (
     <div className="App">
       <NavBar/>
       <Carrousell/>
-      <CardProductDetails imgUrl={'https://www.farmalisto.com.co/146125-large_default/comprar-sal-de-frutas-lua-plus-polvo-citrus-caja-con-6-sobres-precio.jpg'}/>
+      <Routes>
+        <Route path="/:key" element={<CardProductDetails/>}/>
+      </Routes>
       <section className='containerCardproduts'>
         {renderComponent}
       </section>
