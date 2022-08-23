@@ -27,6 +27,7 @@ function App() {
       setOldComponent(event.currentTarget);
     }}/>
   })
+
   return (
     <div className="App">
       <NavBar/>

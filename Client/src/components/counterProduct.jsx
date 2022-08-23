@@ -5,16 +5,16 @@ const CounterProduct = ()=>{
 
   const [count, setCount] = useState(0);
 
-  const plusButton = async (e)=>{
-    await setCount(count+1);
-    e.stopPropagation();
-    e.bubbles = false;
+  const plusButton = (ev)=>{
+    setCount(count+1);
+    ev.stopPropagation();
   }
 
-  const restButton = async(e)=>{
+  const restButton = (ev)=>{
     if (count >0) {
-      await setCount(count - 1);
+      setCount(count - 1);
     }
+    ev.stopPropagation();
   }
 
   return(

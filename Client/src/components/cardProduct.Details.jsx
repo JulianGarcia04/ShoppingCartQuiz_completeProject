@@ -22,7 +22,7 @@ const CardProductDetails = (props)=>{
   let [data, setData] = useState([]);
 
   useEffect(()=>{
-    getOneData(key).then(res=>setData(res))
+    getOneData(key).then(res=>setData(res));
   }, [key]);
 
 
