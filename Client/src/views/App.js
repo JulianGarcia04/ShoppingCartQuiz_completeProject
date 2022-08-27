@@ -17,7 +17,8 @@ function App() {
   }, [])
 
   let renderComponent = data.map(e=>{
-    return <CardProduct img={e.image} title={e.nombre} price={e.precioUnid} key={e._id} methods={(event)=>{
+    let price = new Intl.NumberFormat('es-ES').format(e.precioUnid);
+    return <CardProduct img={e.image} title={e.nombre} price={price} cant={e.cantidad} key={e._id} methods={(event)=>{
       if(oldComponent!= null){
         oldComponent.style.display = 'grid';
       }

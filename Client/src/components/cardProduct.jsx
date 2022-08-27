@@ -12,7 +12,7 @@ const CardProduct = (props)=>{
           <h2>{props.title}</h2>
           <h3>${props.price}</h3>
           <div className='containerOptions'>
-              <CounterProduct/>
+              <CounterProduct cant={props.cant}/>
               <ButtonProduct title={"Añadir al carrito"}/>
           </div>
       </div>

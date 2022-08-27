@@ -1,12 +1,22 @@
 import React, {useState} from "react";
+import Swal from 'sweetalert2';
 import '../styles/counterProduct.scss'
 
-const CounterProduct = ()=>{
+const CounterProduct = (props)=>{
 
   const [count, setCount] = useState(0);
 
+
   const plusButton = (ev)=>{
-    setCount(count+1);
+    if(count < props.cant){
+      setCount(count+1);
+    }else{
+      Swal.fire({
+        title: 'Error',
+        text: 'No hay más productos en el inventario',
+        icon: 'error'
+      })
+    }
     ev.stopPropagation();
   }
 
