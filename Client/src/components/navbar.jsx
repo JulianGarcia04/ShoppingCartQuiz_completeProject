@@ -5,16 +5,14 @@ import shoppingCart from '../assets/shoppingCart.svg'
 import '../styles/navbar.scss';
 
 
-class NavBar extends React.Component {
-    render(){
-        return <nav className='navBar-component'>
-            <div>
-                <img src={iconSearch} alt="search" />
-                <img src={shoppingCart} alt="shoppingCart" />
-                <img src={person} alt="" />
-            </div>
-        </nav>
-    }
+const NavBar = (props)=>  {
+  return <nav className='navBar-component'>
+      <div>
+          <img src={iconSearch} alt="search" />
+          <img src={shoppingCart} alt="shoppingCart" onClick={props.methods}/>
+          <img src={person} alt="" />
+      </div>
+  </nav>
 }
 
 export default NavBar;

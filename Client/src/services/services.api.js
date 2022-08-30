@@ -5,6 +5,3 @@ export const getData = async ()=>{
   let data = await response.data;
   return data;
 }
-
-
-
