@@ -48,7 +48,7 @@ function App() {
       {
         open && <ModalShoppingCart methods={outModal}/>
       }
-      <NavBar methods={renderModal}/>
+      <NavBar methods={renderModal} oldComponent={oldComponent}/>
       <Carrousell/>
       <Routes>
         <Route path="/:key" element={<CardProductDetails/>}/>

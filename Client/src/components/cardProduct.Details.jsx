@@ -44,7 +44,7 @@ const CardProductDetails = (props)=>{
         <h2>
           {data.description}
         </h2>
-        <p>Cantidad por caja: {data.cantidadCaja} sobres</p>
+        <p>Cantidad por caja: {data.cantidadCaja} {data.presentacion}</p>
         <p>Via de administración: {data.tipoConsumo}</p>
       </div>
     </div>

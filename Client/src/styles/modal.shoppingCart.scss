@@ -9,8 +9,8 @@
 
   .modal-container {
     display: grid;
-    grid-template-columns: 50% 50%;
-    grid-template-rows: 10% 80% 10%;
+    grid-template-columns: 2fr 2fr;
+    grid-template-rows: 0.3fr 2fr 0.3fr;
     grid-template-areas: "title title"
                          "product info"
                          "buttons buttons";
@@ -19,24 +19,31 @@
     width: 50%;
 
     .title {
+      padding: 0px 10px;
+      box-sizing: border-box;
+      font-size: 30px;
       width: 100%;
       grid-area: title;
     }
 
 
     .product-container {
+      padding: 0px 10px;
+      box-sizing: border-box;
       width: 100%;
       grid-area: product;
     }
 
     .info-container {
+      padding: 0px 10px;
+      box-sizing: border-box;
       width: 100%;
       grid-area: info;
 
       div {
         display: flex;
         justify-content: space-between;
-        max-width: 100%;
+        width: 100%;
       }
     }
 
@@ -49,8 +56,8 @@
   }
 }
 
-@media (max-width: 1440px) {
+@media (max-width: 1400px) {
   .modal-container {
-
+    font-size: 10px;
   }
 }

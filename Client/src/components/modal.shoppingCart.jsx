@@ -6,8 +6,8 @@ const ModalShoppingCart = (props)=>{
 
   const styles = {
     button: {
-      width: '9.375em',
-      height: '1.5625em',
+      width: '10.375em',
+      height: '1.8625em',
       margin: '0px 0.625em'
     },
     buttonHover: {

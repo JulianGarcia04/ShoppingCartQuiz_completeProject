@@ -1,20 +1,36 @@
 .navBar-component {
+  position: fixed;
+  display: flex;
+  justify-content: space-between;
+  background-color: #009244;
+  border: 1px solid #000;
+  width: 100%;
+  height: 75px;
+  z-index: 5;
+
+  .image {
     display: flex;
-    justify-content: flex-end;
-    background-color: #009244;
-    border: 1px solid #000;
-    height: 75px;
+    justify-content: center;
+    width: 50%;
 
-    div {
-        display: flex;
-        justify-content: space-around;
-        align-items: center;
-        width: 25%;
-        height: 100%;
-
-        img {
-            width: 30px;
-            cursor: pointer;
-        }
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+      cursor: pointer;
     }
+  }
+
+  .options {
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+      width: 25%;
+      height: 100%;
+
+      img {
+          width: 30px;
+          cursor: pointer;
+      }
+  }
 }
